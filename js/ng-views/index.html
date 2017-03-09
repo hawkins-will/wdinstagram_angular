@@ -1,0 +1,9 @@
+<h1>Index Page!</h1>
+
+<div data-ng-repeat="post in vm.posts">
+  <a data-ui-sref="postShow({id: $index})"><img class="indexPhoto" data-ng-src="{{post.photo_url}}"></a>
+  <p>by {{post.author}}</p>
+  <p>"{{post.body}}"</p>
+
+
+</div>
