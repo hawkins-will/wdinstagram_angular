@@ -1,0 +1,11 @@
+<h1>EDITING</h1>
+
+<img data-ng-src={{vm.post.photo_url}}>
+
+<form>
+  <p><input placeholder="Photo URL" data-ng-model="vm.post.photo_url" /></p>
+  <p><input placeholder="Author" data-ng-model="vm.post.author" /></p>
+  <p><input placeholder="Body" data-ng-model="vm.post.body" /></p>
+  <p><button data-ng-click='vm.update()'> Update Entry </button></p>
+  <p><button data-ng-click="vm.destroy()"> Delete </button></p>
+</form>

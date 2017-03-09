@@ -1,9 +1,17 @@
 <h1>Index Page!</h1>
 
 <div data-ng-repeat="post in vm.posts">
-  <a data-ui-sref="postShow({id: $index})"><img class="indexPhoto" data-ng-src="{{post.photo_url}}"></a>
+  <a data-ui-sref="postShow({id: post.id})"><img class="indexPhoto" data-ng-src="{{post.photo_url}}"></a>
   <p>by {{post.author}}</p>
   <p>"{{post.body}}"</p>
-
-
+  <button data-ui-sref="postEdit({id: post.id})">Edit</button>
 </div>
+
+<h2>New Entry </h2>
+
+<form>
+  <p><input placeholder="Photo URL" data-ng-model="vm.post.photo_url" /></p>
+  <p><input placeholder="author" data-ng-model="vm.post.author" /></p>
+  <p><input placeholder="body" data-ng-model="vm.post.body" /></p>
+  <p><button data-ng-click='vm.create()'> Create Entry </button></p>
+</form>
